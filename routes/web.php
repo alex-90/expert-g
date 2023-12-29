@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CDocumentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CDocumentController::class, 'index'])->name('home');
+
+Route::get('edit/{id}', [CDocumentController::class, 'editDocument']);
+Route::patch('edit/{id}', [CDocumentController::class, 'update'])->name('update');
+
+Route::delete('delete/{id}', [CDocumentController::class, 'delDocument'])->name('delete');
