@@ -62,4 +62,21 @@ class CDocumentController extends Controller
     {
         //
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function editDocument($id)
+    {
+        //
+    }
+
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function delDocument($id)
+    {
+        //
+    }
 }
